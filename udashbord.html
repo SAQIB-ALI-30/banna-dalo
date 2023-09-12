@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #703232;
+  color: #fff;
+  padding: 10px;
+  text-align: right;
+}
+
+.dashboard {
+  margin: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+  </style>
+  <script>
+    function logout() {
+  // Perform logout functionality here
+  alert("Logged out successfully!");
+  // Redirect to the login page
+  window.location.href = "login.html";
+}
+
+// Example function to fetch dynamic project and payment history data
+function fetchUserData() {
+  // In a real application, you would fetch this data from a server/database
+  const projects = ["Project 1", "Project 2", "Project 3"];
+  const paymentHistory = [
+    { date: "2023-06-01", amount: "$100", status: "Completed" },
+    { date: "2023-05-30", amount: "$50", status: "Completed" }
+  ];
+
+  // Update the user dashboard with fetched data
+  const projectList = document.getElementById("projectList");
+  const paymentHistoryTable = document.getElementById("paymentHistory");
+
+  projects.forEach((project) => {
+    const li = document.createElement("li");
+    li.textContent = project;
+    projectList.appendChild(li);
+  });
+
+  paymentHistory.forEach((payment) => {
+    const row = paymentHistoryTable.insertRow(-1);
+    const dateCell = row.insertCell(0);
+    const amountCell = row.insertCell(1);
+    const statusCell = row.insertCell(2);
+
+    dateCell.textContent = payment.date;
+    amountCell.textContent = payment.amount;
+    statusCell.textContent = payment.status;
+  });
+}
+
+// Call the function to fetch and display user data
+fetchUserData();
+
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Welcome, to My Deash Bord!</h1>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <div class="dashboard">
+    <h2>My Projects</h2>
+    <ul id="projectList">
+      <!-- Placeholder for project items -->
+      <li>Project 1</li>
+      <li>Project 2</li>
+      <li>Project 3</li>
+    </ul>
+
+    <h2>Payment History</h2>
+    <table id="paymentHistory">
+      <tr>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+      <!-- Placeholder for payment history rows -->
+      <tr>
+        <td>2023-06-01</td>
+        <td>$100</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>2023-05-30</td>
+        <td>$50</td>
+        <td>incomplete</td>
+      </tr>
+
+
+      <tr>
+        <td>2023-06-01</td>
+        <td>$100</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>2023-05-30</td>
+        <td>$50</td>
+        <td>Completed</td>
+      </tr>
+
+
+      <tr>
+        <td>2023-06-01</td>
+        <td>$1320</td>
+        <td>incomplete</td>
+      </tr>
+      <tr>
+        <td>2023-05-30</td>
+        <td>$510</td>
+        <td>Completed</td>
+      </tr>
+
+      <tr>
+        <td>2023-06-01</td>
+        <td>$1000</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>2023-05-30</td>
+        <td>$580</td>
+        <td>Completed</td>
+      </tr>
+
+      <tr>
+        <td>2023-06-01</td>
+        <td>$1500</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>2023-05-30</td>
+        <td>$520</td>
+        <td>Completed</td>
+      </tr>
+
+      <tr>
+        <td>2023-06-01</td>
+        <td>$1200</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>2023-05-30</td>
+        <td>$540</td>
+        <td>Completed</td>
+      </tr>
+
+      <tr>
+        <td>2023-06-01</td>
+        <td>$100</td>
+        <td>incomplete</td>
+      </tr>
+      <tr>
+        <td>2023-05-30</td>
+        <td>$50</td>
+        <td>Completed</td>
+      </tr>
+
+      <tr>
+        <td>2023-06-01</td>
+        <td>$100</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>2023-05-30</td>
+        <td>$20</td>
+        <td>incomplete</td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

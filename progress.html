@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Progress</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.project-item h3 {
+  margin: 0;
+}
+
+.project-item p {
+  margin: 5px 0;
+}
+
+.project-item .progress-bar {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.project-item .progress-bar-inner {
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.project-item .progress-text {
+  text-align: right;
+  font-weight: bold;
+}
+
+.no-projects {
+  text-align: center;
+}
+
+  </style>
+  <script>
+    // Sample data for project progress (you can fetch this data from a server in real-world scenarios)
+const projects = [
+  { name: 'Project 1', description: 'Lorem ipsum dolor sit amet.', progress: 60 },
+  { name: 'Project 2', description: 'Consectetur adipiscing elit.', progress: 35 },
+  { name: 'Project 3', description: 'Sed do eiusmod tempor incididunt.', progress: 80 },
+];
+
+const progressList = document.getElementById('progressList');
+
+if (projects.length === 0) {
+  const noProjects = document.createElement('p');
+  noProjects.classList.add('no-projects');
+  noProjects.textContent = 'No projects found.';
+  progressList.appendChild(noProjects);
+} else {
+  projects.forEach((project) => {
+    const projectItem = document.createElement('div');
+    projectItem.classList.add('project-item');
+
+    const projectName = document.createElement('h3');
+    projectName.textContent = project.name;
+
+    const projectDescription = document.createElement('p');
+    projectDescription.textContent = project.description;
+
+    const progressBar = document.createElement('div');
+    progressBar.classList.add('progress-bar');
+
+    const progressBarInner = document.createElement('div');
+    progressBarInner.classList.add('progress-bar-inner');
+    progressBarInner.style.width = project.progress + '%';
+
+    progressBar.appendChild(progressBarInner);
+
+    const progressText = document.createElement('p');
+    progressText.classList.add('progress-text');
+    progressText.textContent = project.progress + '%';
+
+    projectItem.appendChild(projectName);
+    projectItem.appendChild(projectDescription);
+    projectItem.appendChild(progressBar);
+    projectItem.appendChild(progressText);
+
+    progressList.appendChild(projectItem);
+  });
+}
+
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Project Progress</h1>
+    <div id="progressList">
+      <!-- Project progress will be dynamically added here -->
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

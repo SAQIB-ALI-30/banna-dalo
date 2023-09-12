@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Project Form</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+          margin: 0;
+          padding: 0;
+      }
+
+      .container {
+          max-width: 500px;
+          margin: 50px auto;
+          padding: 20px;
+          background-color: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+          text-align: center;
+          margin-bottom: 20px;
+      }
+
+      label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 5px;
+      }
+
+      input, textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+
+      button {
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+      }
+
+      button:hover {
+          background-color: #0056b3;
+      }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add Project</h1>
+        <form action="addproj.php" method="post">
+            <label for="name">Project Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+            <label for="budget">Budget:</label>
+            <input type="number" id="budget" name="budget" required>
+            <label for="phoneno">Phone Number:</label>
+            <input type="text" id="phoneno" name="phoneno" required>
+            <button type="submit">Add Project</button>
+        </form>
+    </div>
+</body>
+</html>

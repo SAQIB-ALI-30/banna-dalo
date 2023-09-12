@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>building stronger communities</title>
+    <style>
+        h1{
+            color: brown;
+            background-color: antiquewhite;
+        }
+        #menu
+{
+	position:absolute;
+	right: 0;
+	top: 1em;
+}
+
+#menu ul
+{
+	display: inline-block;
+}
+
+#menu li
+{
+	display: block;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+}
+
+#menu li a, #menu li span
+{
+	display: inline-block;
+	margin-left: 1px;
+	padding: 0em 1.5em;
+	letter-spacing: 0.10em;
+	text-decoration: none;
+	font-size: 1em;
+	text-transform: uppercase;
+	outline: 0;
+	color: #212121;
+}
+
+#menu li:hover a
+{
+	background: #b4b4b4;
+	color: #FFF !important;
+}
+
+
+#menu li.current_page_item a
+{
+	background: #616161;
+	color: #FFF !important;
+}
+.grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 20px;
+    }
+    
+    .grid-item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .grid-item img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .book-button {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Banna Dalo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        </div>
+    </div>
+    </nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <header> <img src= "../logo.png" alt = "" width="9%">
+<div id="menu">
+  <br><br><br><br><br>
+  <ul>
+    <li><a href="../project.html" accesskey="1" title="">Homepage</a></li>
+    <li class="current_page_item"><a href="#" accesskey="2" title="" >Services</a></li>
+    <li><a href="../about/about_us.html" accesskey="3" title="" >About us</a></li>
+    <li><a href="../gallery/gallery.html" accesskey="4" title="" >gallery</a></li>
+    <li><a href="../contact_us/contact_us.html" accesskey="5" title="" >Contect</a></li>
+  </ul>
+</div>
+</header>
+<br>
+<br>
+<br>
+<h3>please login first to use our best services!!!</h3>
+<br><br>
+  <div class="grid-container">
+    <div class="grid-item">
+      <h3>step 1</h3>
+      <p>welcome to our services here we will provide step by step process of services...</p>
+      <a href="../services/calculator.html" class="book-button">cost estimate</a>
+    </div>
+    <div class="grid-item">
+      <h3>step 2</h3>
+      <p>If the cost estimation is according to your bughet then check our reviews so on..</p>
+      <a href="../gallery/gallery.html" class="book-button">check reviews</a>
+    </div>
+    <!-- Add more grid items as needed -->
+    <div class="grid-item">
+      <h3>step 3</h3>
+      <p>If the reviews were satisfied then add project and get the progress on daily basis</p>
+      <a href="../services/addproj.html" class="book-button">add project</a>
+    </div>
+    <div class="grid-item">
+      <h3>step 4</h3>
+      <p>Here we will update the progress of the project on daily basis what ever we done</p>
+      <a href="../services/progress.html" class="book-button">progress</a>
+    </div>
+    <div class="grid-item">
+      <h3>step 5</h3>
+      <p>The payment history of the project that will be seen here complete confimation</p>
+      <a href="../services/udashbord.html" class="book-button">dashbord</a>
+    </div>
+    
+  </div>
+  <footer>
+    <p>&copy; 2023 My Blog. All rights reserved.</p>
+  </footer>
+</body>
+</html>

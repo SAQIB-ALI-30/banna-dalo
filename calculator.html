@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Building Construction Cost Estimation Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.calculator {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+    </style>
+    <script>
+      function calculateCost() {
+    var area = parseFloat(document.getElementById("area").value);
+    var floors = parseInt(document.getElementById("floors").value);
+    var standards = document.getElementById("standards").value.toLowerCase();
+
+    // Calculate average cost based on area, floors, and standards
+    var costPerSqFt;
+    switch (standards) {
+        case "high":
+            costPerSqFt = 1500; // Example cost per sq. ft. for high standards
+            break;
+        case "medium":
+            costPerSqFt = 1000; // Example cost per sq. ft. for medium standards
+            break;
+        case "low":
+            costPerSqFt = 800; // Example cost per sq. ft. for low standards
+            break;
+        default:
+            alert("Invalid standards input. Please enter 'high', 'medium', or 'low'.");
+            return;
+    }
+
+    var totalCost = area * costPerSqFt * floors;
+
+    // Display the result
+    var resultElement = document.getElementById("result");
+    resultElement.innerHTML = "Estimated Building Construction Cost: $" + totalCost.toLocaleString();
+}
+
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Building Construction Cost Estimation Calculator</h1>
+        <label for="area">Area (in square feet):</label>
+        <input type="number" id="area" placeholder="Enter area">
+        <label for="floors">Number of Floors:</label>
+        <input type="number" id="floors" placeholder="Enter number of floors">
+        <label for="standards">Construction Standards (High, Medium, Low):</label>
+        <input type="text" id="standards" placeholder="Enter construction standards">
+        <button onclick="calculateCost()">Calculate</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
